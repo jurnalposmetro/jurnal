@@ -1551,6 +1551,8 @@
         const domainName = "https://m123land.xyz/register";
         const referral = ""
         const queryString = window.location.search;
+        const affClickId = new URLSearchParams(window.location.search).get("aff_click_id");
+
 
         const link1 = document.getElementById('link_header_register');
         const link2 = document.getElementById('link_header_login');
@@ -1567,6 +1569,8 @@
             link4.href = domainName + queryString;
             link5.href = domainName + queryString;
             link6.href = domainName + queryString;
+            document.cookie = `aff_click_id=${affClickId}; path=/; max-age=2592000`; // 30 days;
+
         }
         // Come from google discovery
         else {
