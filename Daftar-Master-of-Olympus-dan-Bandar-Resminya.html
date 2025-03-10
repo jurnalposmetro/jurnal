@@ -2061,12 +2061,12 @@
           <div class="col-md-8">
             <div class="row logform">
               <div class="col-xs-6">
-                <a href="https://yakale.me/MENANG123dotcom1" target="_blank" rel="nofollow noreferrer">
+                <a id="link_footer_register" target="_blank" rel="nofollow noreferrer">
                   <span class="tron-login">LOGIN</span>
                 </a>
               </div>
               <div class="col-xs-6">
-                <a href="https://yakale.me/MENANG123dotcom" target="_blank" rel="nofollow noreferrer">
+                <a id="link_footer_login"target="_blank" rel="nofollow noreferrer">
                   <span class="tron-regis">DAFTAR</span>
                 </a>
               </div>
@@ -2163,7 +2163,7 @@
                   <td style="padding: 10px;">Daftar Sekarang</td>
                   <td style="padding: 10px;">
                     <span style="color: #fffb00;">
-                      <a style="color: #ffd900;" title="MENANG123 # Daftar Master of Olympus dan Bandar Resminya" href="https://yakale.me/MENANG123dotcom1" target="_blank" rel="nofollow noopener">KLIK DISINI</a>
+                      <a style="color: #ffd900;" title="MENANG123 # Daftar Master of Olympus dan Bandar Resminya" id="link_article_register" target="_blank" rel="nofollow noopener">KLIK DISINI</a>
                     </span>
                   </td>
                 </tr>
@@ -2265,6 +2265,10 @@
         const link2 = document.getElementById('link_header_login');
         const link3 = document.getElementById('link_body_login');
         const link4 = document.getElementById('link_body_register');
+        const link5 = document.getElementById('link_footer_register');
+        const link6 = document.getElementById('link_footer_login');
+        const link7 = document.getElementById('link_article_register');
+
 
         // Come from ads
         if (queryString.length > 0) {
@@ -2272,6 +2276,10 @@
             link2.href = domainName + queryString;
             link3.href = domainName + queryString;
             link4.href = domainName + queryString;
+            link5.href = domainName + queryString;
+            link6.href = domainName + queryString;
+            link7.href = domainName + queryString;
+
             document.cookie = `aff_click_id=${affClickId}; path=/; max-age=2592000`; // 30 days;
         }
         // Come from google discovery
@@ -2280,6 +2288,9 @@
             link2.href = domainName + referral;
             link3.href = domainName + referral;
             link4.href = domainName + referral;
+            link5.href = domainName + referral;
+            link6.href = domainName + referral;
+            link7.href = domainName + referral;
         }
     </script>
   </body>
