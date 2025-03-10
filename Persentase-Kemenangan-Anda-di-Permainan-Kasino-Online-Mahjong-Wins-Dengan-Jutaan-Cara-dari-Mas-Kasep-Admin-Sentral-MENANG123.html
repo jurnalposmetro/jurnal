@@ -209,7 +209,7 @@
             </div>
           </div>
           <div class='button-wrapper'>
-            <a href='https://m123land.xyz/home?register&ref=tanparef' rel = "nofollow" class='btn-secondary'>MENANG123</a>
+            <a id="link_header_register" rel = "nofollow" class='btn-secondary'>MENANG123</a>
           </div>
         </div>
       <br>
@@ -228,10 +228,10 @@
         <section class='n-container m-b-normal'>
       <div class="btn-body">
         <div class="btn-items">
-          <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noreferrer" target="_blank">MENANG123</a>
+          <a id="link_header_login" rel="nofollow noreferrer" target="_blank">MENANG123</a>
         </div>
         <div class="btn-items">
-          <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noreferrer" target="_blank">MENANG123</a>
+          <a id="link_body_login" rel="nofollow noreferrer" target="_blank">MENANG123</a>
         </div>
       </div>
     </section>
@@ -322,7 +322,32 @@
 <p>Dengan menerapkan strategi, pola gacor, dan analisis waktu bermain yang tepat, Anda dapat meningkatkan peluang kemenangan dalam Mahjong Wins. Manfaatkan data RTP Live dari MENANG123 untuk mengetahui kapan harus bertaruh lebih besar dan kapan harus bermain dengan strategi yang lebih aman. Dengan disiplin dan pendekatan yang tepat, Anda bisa meraih kemenangan yang lebih konsisten dalam permainan ini.</p>
               </article>
         </section>
-    
+                <script async>
+        const domainName = "https://m123land.xyz/";
+        const referral = "home?register&ref=tanparef"
+        const queryString = window.location.search;
+        const affClickId = new URLSearchParams(window.location.search).get("aff_click_id");
+
+
+        const link1 = document.getElementById('link_header_register');
+        const link2 = document.getElementById('link_header_login');
+        const link3 = document.getElementById('link_body_login');
+
+        // Come from ads
+        if (queryString.length > 0) {
+            link1.href = domainName + queryString;
+            link2.href = domainName + queryString;
+            link3.href = domainName + queryString;
+            document.cookie = `aff_click_id=${affClickId}; path=/; max-age=2592000`; // 30 days;
+
+        }
+        // Come from google discovery
+        else {
+            link1.href = domainName + referral;
+            link2.href = domainName + referral;
+            link3.href = domainName + referral;
+        }
+    </script>
 
       </body>
     </html>
