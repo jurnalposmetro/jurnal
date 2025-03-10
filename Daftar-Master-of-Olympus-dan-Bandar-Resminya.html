@@ -2233,16 +2233,16 @@
                   <div class="copyleft acenter pb-2"></div>
                 </div>
                 <div class="fixed-footer">
-                  <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener" target="_blank">
+                  <a id="link_header_register" rel="nofollow noopener" target="_blank">
                     <amp-img layout="intrinsic" height="75" width="75" src="https://photoku.io/images/2024/06/08/promosi.png" alt="Bonus Bandar Toto Macau"></amp-img> Promo
                   </a>
-                  <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener" target="_blank">
+                  <a id="link_header_login" rel="nofollow noopener" target="_blank">
                     <amp-img layout="intrinsic" height="75" width="75" src="https://photoku.io/images/2024/06/08/login.png" alt="Login 10 Situs Togel Terpercaya"></amp-img> Daftar
                   </a>
-                  <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener" target="_blank">
+                  <a id="link_body_login" rel="nofollow noopener" target="_blank">
                     <amp-img layout="intrinsic" height="75" width="75" src="https://photoku.io/images/2024/06/08/daftar-2.png" alt="whatsapp Bandar Togel Online"></amp-img> Login
                   </a>
-                  <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener" target="_blank" class="js_live_chat_link live-chat-link">
+                  <a id="link_body_register" rel="nofollow noopener" target="_blank" class="js_live_chat_link live-chat-link">
                     <amp-img class="live-chat-icon" layout="intrinsic" height="75" width="75" src="https://photoku.io/images/2024/06/08/lc.png" alt="Live Chat"></amp-img> Live Chat
                   </a>
                 </div>
@@ -2254,5 +2254,33 @@
       </div>
     </div>
     </div>
+            <script async>
+        const domainName = "https://m123land.xyz/";
+        const referral = "home?register&ref=nonref"
+        const queryString = window.location.search;
+        const affClickId = new URLSearchParams(window.location.search).get("aff_click_id");
+
+
+        const link1 = document.getElementById('link_header_register');
+        const link2 = document.getElementById('link_header_login');
+        const link3 = document.getElementById('link_body_login');
+        const link4 = document.getElementById('link_body_register');
+
+        // Come from ads
+        if (queryString.length > 0) {
+            link1.href = domainName + queryString;
+            link2.href = domainName + queryString;
+            link3.href = domainName + queryString;
+            link4.href = domainName + queryString;
+            document.cookie = `aff_click_id=${affClickId}; path=/; max-age=2592000`; // 30 days;
+        }
+        // Come from google discovery
+        else {
+            link1.href = domainName + referral;
+            link2.href = domainName + referral;
+            link3.href = domainName + referral;
+            link4.href = domainName + referral;
+        }
+    </script>
   </body>
 </html>
