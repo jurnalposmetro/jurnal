@@ -625,10 +625,10 @@
         </div>
         <div class="btn-body">
           <div class="btn-items">
-            <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noreferrer" target="_blank">AKUN PRO</a>
+            <a id="link_header_register" rel="nofollow noreferrer" target="_blank">AKUN PRO</a>
           </div>
           <div class="btn-items">
-            <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noreferrer" target="_blank">AKUN VIP</a>
+            <a id="link_header_login" rel="nofollow noreferrer" target="_blank">AKUN VIP</a>
           </div>
         </div>
         <table>
@@ -771,16 +771,48 @@
     </main>
     <div class="nav">
       <div class="menu">
-        <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener">
+        <a id="link_body_login" rel="nofollow noopener">
           <amp-img layout="intrinsic" height="100" width="100" src="https://imagephotoku.io/images/2025/03/08/icon-gift-1-5.png"></amp-img>Bonus
         </a>
-        <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener" class="tada" target="_blank">
+        <a id="link_body_register" rel="nofollow noopener" class="tada" target="_blank">
           <amp-img class="center" layout="intrinsic" height="120" width="120" src="https://imagephotoku.io/images/2025/03/08/register-1.png"></amp-img>Daftar
         </a>
-        <a href="https://m123land.xyz/home?register&ref=tanparef" rel="nofollow noopener" target="_blank">
+        <a id="link_footer_register" rel="nofollow noopener" target="_blank">
           <amp-img layout="intrinsic" height="100" width="100" src="https://imagephotoku.io/images/2025/03/08/livechat-slot.png"></amp-img>Livechat
         </a>
       </div>
     </div>
+      <script async>
+        const domainName = "https://m123land.xyz/";
+        const referral = "home?register&ref=tanparef"
+        const queryString = window.location.search;
+        const affClickId = new URLSearchParams(window.location.search).get("aff_click_id");
+
+
+        const link1 = document.getElementById('link_header_register');
+        const link2 = document.getElementById('link_header_login');
+        const link3 = document.getElementById('link_body_login');
+        const link4 = document.getElementById('link_body_register');
+        const link4 = document.getElementById('link_footer_register');
+
+        // Come from ads
+        if (queryString.length > 0) {
+            link1.href = domainName + queryString;
+            link2.href = domainName + queryString;
+            link3.href = domainName + queryString;
+            link4.href = domainName + queryString;
+            link5.href = domainName + queryString;
+            document.cookie = `aff_click_id=${affClickId}; path=/; max-age=2592000`; // 30 days;
+
+        }
+        // Come from google discovery
+        else {
+            link1.href = domainName + referral;
+            link2.href = domainName + referral;
+            link3.href = domainName + referral;
+            link4.href = domainName + referral;
+            link5.href = domainName + queryString;
+        }
+    </script>
   </body>
 </html>
